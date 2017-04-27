@@ -193,7 +193,7 @@ body .gform_wrapper .gsection_description,
 body .gform_wrapper .instruction {
   font-family: inherit;
   font-size: 67.5%;
-  @include opacity(0.7);
+  opacity: 0.7;
 }
 
 body .gform_wrapper .description,

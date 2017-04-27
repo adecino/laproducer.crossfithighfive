@@ -240,11 +240,12 @@ class Cornerstone_Common extends Cornerstone_Plugin_Component {
 	}
 
 	/**
-	 * Returns appropriate js extension depending on SCRIPT_DEBUG
-	 * @return string  .js or .min.js
+	 * Previusly returned appropriate js extension depending on SCRIPT_DEBUG.
+   * This was removed in 2.0.3 in favor of always serving minified files with sourcemaps
+	 * @return string
 	 */
 	public function jsSuffix() {
-		return ( $this->isDebug() ) ? '.js' : '.min.js';
+		return '.js';
 	}
 
 	/**

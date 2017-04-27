@@ -179,7 +179,7 @@ article.comment {
   padding-top: $layoutSpacing;
   padding-bottom: $layoutSpacing;
   background-color: $baseModBackground;
-  @include clearfix();
+  @include cf();
 }
 
 .x-comment-header {
@@ -188,7 +188,7 @@ article.comment {
   .x-comment-meta {
     margin-bottom: 4px;
     line-height: 1;
-    @include clearfix();
+    @include cf();
   }
 }
 
@@ -330,7 +330,7 @@ article.comment {
     @include font-size(1.1);
     line-height: 1.2;
     text-align: center;
-    @include opacity(0.65);
+    opacity: 0.65;
   }
 
   @include break(baby-bear) {

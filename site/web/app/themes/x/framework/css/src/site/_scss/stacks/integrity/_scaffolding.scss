@@ -15,18 +15,20 @@
 // Site Wrap
 // =============================================================================
 
-.site {
-  @include clearfix();
+.site,
+.x-site {
+  @include cf();
 }
 
-.x-boxed-layout-active .site {
+.x-boxed-layout-active .site,
+.x-boxed-layout-active .x-site {
   margin: 0 auto;
   border: 1px solid #d5d5d5;
   border: 1px solid $siteBorderColor;
   border-top: 0;
   border-bottom: 0;
   background-color: $siteBackground;
-  @include box-shadow(#{$siteBoxShadow});
+  box-shadow: $siteBoxShadow;
   @include box-sizing(#{content-box});
 }
 

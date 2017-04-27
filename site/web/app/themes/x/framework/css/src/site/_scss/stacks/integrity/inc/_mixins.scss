@@ -41,7 +41,7 @@
     color: $tagColorRgba;
     background-color: transparent;
     border-radius: 0.35em;
-    @include box-shadow(#{inset 0 0 0 rgba(0, 0, 0, 0), $tagBoxShadow});
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), $tagBoxShadow;
     @include transition(#{color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease});
     @include break(middle-bear) {
       @include font-size(1.1);
@@ -66,7 +66,7 @@
       border-color: $tagBorderColorActiveRgba;
       background-color: $tagBackgroundColorActive;
       background-color: $tagBackgroundColorActiveRgba;
-      @include box-shadow(#{$tagBoxShadowActive});
+      box-shadow: $tagBoxShadowActive;
     }
   }
 }
@@ -84,7 +84,7 @@
     border: 1px solid $shortcodeBorderColorRgba;
     background-color: $thumbnailBackground;
     border-radius: 2px;
-    @include box-shadow(#{$thumbnailBoxShadow});
+    box-shadow: $thumbnailBoxShadow;
     @include transition(#{border 0.3s ease, box-shadow 0.3s ease});
   }
 }

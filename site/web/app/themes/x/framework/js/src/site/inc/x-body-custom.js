@@ -16,10 +16,6 @@
 
 jQuery(document).ready(function($) {
 
-  //
-  // Placeholder.
-  //
 
-  $('input, textarea').placeholder();
 
 });

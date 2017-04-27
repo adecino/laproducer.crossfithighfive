@@ -56,7 +56,7 @@
   text-align: center;
   background-color: $baseModBackground;
   border-radius: 3px;
-  @include box-shadow(#{$baseShortcodeBoxShadow});
+  box-shadow: $baseShortcodeBoxShadow;
 
   img {
     border-radius: 2px;
@@ -81,7 +81,7 @@
 .gallery {
   clear: both;
   margin: -4% 0 $baseMargin;
-  @include clearfix();
+  @include cf();
 
   .gallery-item {
     float: left;

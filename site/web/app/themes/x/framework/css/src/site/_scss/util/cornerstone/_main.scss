@@ -13,6 +13,7 @@
 //   04. Toggling Content
 //   05. Visibility
 //   06. Opacity
+//   07. Positioning
 // =============================================================================
 
 // Clearfix
@@ -20,7 +21,7 @@
 
 .cs-cf,
 .cs-clearfix {
-  @include clearfix();
+  @include cf();
 }
 
 
@@ -28,21 +29,16 @@
 // Floats
 // =============================================================================
 
-.cs-float-none  { float: none;  }
-.cs-float-left  { float: left;  }
-.cs-float-right { float: right; }
+.cs-f-n { float: none;  }
+.cs-f-l { float: left;  }
+.cs-f-r { float: right; }
 
 
 
 // Toggling Content
 // =============================================================================
 
-.cs-hide              { display: none !important;         }
-.cs-show-inline       { display: inline !important;       }
-.cs-show-block        { display: block !important;        }
-.cs-show-inline-block { display: inline-block !important; }
-.cs-show-table        { display: table !important;        }
-.cs-show-table-cell   { display: table-cell !important;   }
+.cs-hide { display: none !important; }
 
 
 
@@ -65,5 +61,14 @@
 // Opacity
 // =============================================================================
 
-.cs-transparent { opacity: 0 !important; }
-.cs-opaque      { opacity: 1 !important; }
+.cs-o-1 { opacity: 0 !important; }
+.cs-o-0 { opacity: 1 !important; }
+
+
+
+// Positioning
+// =============================================================================
+
+.cs-pos-r { position: relative !important; }
+.cs-pos-a { position: absolute !important; }
+.cs-pos-f { position: fixed !important;    }

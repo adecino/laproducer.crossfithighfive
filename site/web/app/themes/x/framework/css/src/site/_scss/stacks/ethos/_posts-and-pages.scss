@@ -51,7 +51,7 @@
 // =============================================================================
 
 .hentry {
-  @include clearfix();
+  @include cf();
 }
 
 
@@ -104,7 +104,7 @@ a.entry-thumb {
     bottom: 0;
     background-color: $entryCoverBackgroundHover;
     z-index: 1;
-    @include opacity(0);
+    opacity: 0;
     @include transition(#{all 0.615s $easeOutExpo});
   }
 
@@ -115,7 +115,7 @@ a.entry-thumb {
 
     &:before {
       top: 0;
-      @include opacity(1);
+      opacity: 1;
     }
   }
 
@@ -131,7 +131,7 @@ a.entry-thumb {
 
     &:before {
       background-color: $entryCoverBackground;
-      @include opacity(1);
+      opacity: 1;
     }
 
     &:hover {
@@ -236,7 +236,7 @@ a.entry-thumb {
 //
 
 .entry-header {
-  @include clearfix();
+  @include cf();
 }
 
 .entry-title {
@@ -288,7 +288,7 @@ h2.entry-title {
 
 .entry-content {
   margin-top: $layoutSpacing / 2;
-  @include clearfix();
+  @include cf();
 
   embed,
   iframe,
@@ -313,7 +313,7 @@ h2.entry-title {
 
 .entry-top-navigation {
   margin-bottom: $layoutSpacing;
-  @include clearfix();
+  @include cf();
 
   .entry-parent {
     float: left;
@@ -545,7 +545,7 @@ h2.entry-title {
 
 .x-filterable-featured-entries {
   margin-bottom: $layoutSpacing;
-  @include clearfix();
+  @include cf();
 }
 
 .x-btn-filterable {

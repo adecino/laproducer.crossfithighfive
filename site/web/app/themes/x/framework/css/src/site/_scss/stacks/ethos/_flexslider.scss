@@ -60,7 +60,7 @@
 //
 
 .x-slides {
-  @include clearfix();
+  @include cf();
 }
 
 
@@ -114,7 +114,7 @@
   text-align: center;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.325);
   color: $white;
-  @include opacity(0.5);
+  opacity: 0.5;
   @include transition(#{opacity 0.3s ease});
   z-index: 10;
 
@@ -125,7 +125,7 @@
   &:hover {
     text-decoration: none;
     color: $white;
-    @include opacity(1);
+    opacity: 1;
   }
 
   &.flex-prev {
@@ -164,16 +164,16 @@
     height: 14px;
     background-color: $baseModBackground;
     border-radius: 100em;
-    @include opacity(0.5);
+    opacity: 0.5;
     @include transition(#{opacity 0.3s ease});
 
     &:hover {
       cursor: pointer;
-      @include opacity(1);
+      opacity: 1;
     }
 
     &.flex-active {
-      @include opacity(1);
+      opacity: 1;
     }
   }
 }

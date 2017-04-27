@@ -14,10 +14,10 @@ function x_shortcode_section( $atts, $content = null ) {
     'bg_video'                     => '',
     'bg_video_poster'              => '',
     'parallax'                     => '',
-    'separator_top_type'           => '',
+    'separator_top_type'           => 'none',
     'separator_top_height'         => '',
     'separator_top_angle_point'    => '',
-    'separator_bottom_type'        => '',
+    'separator_bottom_type'        => 'none',
     'separator_bottom_height'      => '',
     'separator_bottom_angle_point' => '',
   ), $atts, 'x_section' ) );

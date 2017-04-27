@@ -119,7 +119,7 @@ input[type="color"],
   color: $gray;
   background-color: $inputBackground;
   border-radius: $inputBorderRadius;
-  @include box-shadow($inputUneditableBoxShadow);
+  box-shadow: $inputUneditableBoxShadow;
 }
 
 
@@ -170,7 +170,7 @@ input[type="color"],
     border-color: $inputBorderFocus;
     outline: 0;
     outline: thin dotted \9;
-    @include box-shadow($inputBoxShadowFocus);
+    box-shadow: $inputBoxShadowFocus;
   }
 }
 
@@ -371,7 +371,7 @@ input[type="checkbox"][readonly] {
 
 //   &:focus {
 //     border-color: darken(#ee5f5b, 10%);
-//     @include box-shadow(0 0 6px lighten(#ee5f5b, 20%));
+//     box-shadow: 0 0 6px lighten(#ee5f5b, 20%);
 //   }
 // }
 

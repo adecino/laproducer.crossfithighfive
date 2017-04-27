@@ -37,7 +37,7 @@
 
 .bbp-forums,
 .bbp-topics {
-  @include box-shadow(#{$bpBoxShadowOuter});
+  box-shadow: $bpBoxShadowOuter;
 }
 
 .bbp-forums {
@@ -58,7 +58,7 @@
   margin: 0 0 (-$bpBorderWidth);
   border: $bpBorder;
   background-color: $bpAccentColor;
-  @include box-shadow(#{$bpBoxShadowOuter, $bpBoxShadowInner});
+  box-shadow: $bpBoxShadowOuter, $bpBoxShadowInner;
 }
 
 .bbp-header,
@@ -68,7 +68,7 @@
 .bbp-body > .hentry,
 .bbp-footer,
 .bbp-footer > ul {
-  @include clearfix();
+  @include cf();
 }
 
 .bbp-header > ul > li,
@@ -107,7 +107,7 @@
 
   > div.hentry {
     margin-bottom: $bpSpacingSm;
-    @include box-shadow(#{$bpBoxShadowOuter});
+    box-shadow: $bpBoxShadowOuter;
   }
 }
 
@@ -117,13 +117,13 @@
     border: $bpBorder;
     padding: $bpSpacingSm;
     background-color: $baseModBackground;
-    @include box-shadow(#{$bpBoxShadowOuter});
+    box-shadow: $bpBoxShadowOuter;
   }
 }
 
 .x-bbp-header {
   margin: 0 0 $bpSpacingSm;
-  @include clearfix();
+  @include cf();
 
   .actions {
     line-height: 1;
@@ -197,8 +197,8 @@
   line-height: 1;
   text-transform: uppercase;
   background-color: $bpAccentColor;
-  @include box-shadow(#{$bpBoxShadowInner});
-  @include clearfix();
+  box-shadow: $bpBoxShadowInner;
+  @include cf();
 
   .x-item-info-date {
     float: left;
@@ -227,7 +227,7 @@
     .x-bbp-admin-links-inner {
       margin: 0 (-$bpSpacingSm - $bpBorderWidth) (-$bpSpacingSm - $bpBorderWidth) (-$bpSpacingSm);
       border-top: $bpBorder;
-      @include clearfix();
+      @include cf();
     }
 
     a {
@@ -238,7 +238,7 @@
       line-height: 1;
       color: $bpNavSubnavColor;
       background-color: $bpAccentColor;
-      @include box-shadow(#{$bpBoxShadowInner});
+      box-shadow: $bpBoxShadowInner;
       @include text-overflow();
 
       width: 20%;
@@ -260,7 +260,7 @@
 }
 
 .x-bbp-item-info-content {
-  @include clearfix();
+  @include cf();
 
   .x-bbp-item-info-author {
     width: 80px;
@@ -321,8 +321,8 @@
   border: $bpBorder;
   padding: $bpSpacingSm;
   background-color: $bpAccentColor;
-  @include box-shadow(#{$bpBoxShadowOuter});
-  @include clearfix();
+  box-shadow: $bpBoxShadowOuter;
+  @include cf();
 
   label {
     margin: 0;
@@ -404,7 +404,7 @@
 }
 
 .bbp-submit-wrapper {
-  @include clearfix();
+  @include cf();
 
   button[type="submit"] {
     float: left;
@@ -419,7 +419,7 @@
     text-shadow: none;
     color: $white;
     background-color: $accentColor;
-    @include box-shadow(#{none});
+    box-shadow: none;
     border-radius: $inputBorderRadius;
 
     &:focus,
@@ -448,7 +448,7 @@
   border: $bpBorder;
   padding: $bpSpacingSm;
   background-color: $bpAccentColor;
-  @include box-shadow(#{$bpBoxShadowOuter});
+  box-shadow: $bpBoxShadowOuter;
 
   #bbp-user-avatar {
     float: left;
@@ -483,12 +483,12 @@
   margin: 0 0 $bpSpacingLg;
   border: $bpBorder;
   background-color: $bpAccentColor;
-  @include box-shadow(#{$bpBoxShadowOuter, $bpBoxShadowInner});
+  box-shadow: $bpBoxShadowOuter, $bpBoxShadowInner;
 
   > ul {
     margin: 0 (-$bpBorderWidth) (-$bpBorderWidth) 0;
     list-style: none;
-    @include clearfix();
+    @include cf();
 
     > li {
       display: inline-block;
@@ -512,7 +512,7 @@
         line-height: 1;
         color: $bpNavSubnavColor;
         background-color: $bpAccentColor;
-        @include box-shadow(#{$bpBoxShadowInner});
+        box-shadow: $bpBoxShadowInner;
         @include text-overflow();
       }
 
@@ -608,7 +608,7 @@
     line-height: $baseLineHeight;
     text-transform: uppercase;
     background-color: $bpAccentColor;
-    @include box-shadow(#{$bpBoxShadowOuter, $bpBoxShadowInner});
+    box-shadow: $bpBoxShadowOuter, $bpBoxShadowInner;
   }
 }
 
@@ -638,7 +638,7 @@
 
 .bbp-pagination-links {
   display: inline-block;
-  @include clearfix();
+  @include cf();
 }
 
 
@@ -693,7 +693,7 @@
   color: $white;
   background-color: $accentColor;
   border-radius: 3px;
-  @include box-shadow(#{none});
+  box-shadow: none;
 
   &:hover {
     color: $white;
@@ -712,7 +712,7 @@
   line-height: 1;
   text-align: center;
   background-color: $bpAccentColor;
-  @include box-shadow(#{$bpBoxShadowOuter, $bpBoxShadowInner});
+  box-shadow: $bpBoxShadowOuter, $bpBoxShadowInner;
 
   span {
     display: block;

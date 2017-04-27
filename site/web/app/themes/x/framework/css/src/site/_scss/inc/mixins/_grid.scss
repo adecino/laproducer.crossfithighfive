@@ -17,9 +17,10 @@
 
 @mixin section() {
   .x-section {
+    position: relative;
     margin: 0 0 $baseMargin;
     padding: 45px 0;
-    @include clearfix();
+    @include cf();
 
     &.bg-image,
     &.bg-pattern {
@@ -97,6 +98,31 @@
       }
     }
   }
+
+  .x-section-separator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+
+  .x-section-separator-top {
+    top: 0;
+    transform: translate(0, -100%);
+  }
+
+  .x-section-separator-bottom {
+    bottom: 0;
+    transform: translate(0, 100%);
+  }
 }
 
 
@@ -166,7 +192,7 @@
   .x-content-band {
     margin: 0 0 $baseMargin;
     padding: 40px 0;
-    @include clearfix();
+    @include cf();
 
     &.bg-image,
     &.bg-pattern {

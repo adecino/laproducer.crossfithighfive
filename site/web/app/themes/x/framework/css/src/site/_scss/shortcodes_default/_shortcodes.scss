@@ -85,7 +85,7 @@
 
 .x-container {
   margin: 0 auto;
-  @include clearfix();
+  @include cf();
 }
 
 
@@ -757,7 +757,7 @@ a.x-img {
   display: block;
 
   &:not(.x-img-thumbnail) {
-    @include translate3d(0, 0, 0);
+    @include transform(#{translate3d(0, 0, 0)});
     @include transition(#{opacity 0.3s ease});
 
     &:hover {
@@ -805,13 +805,13 @@ a.x-img {
   padding: 5px;
   border: 1px solid $baseBorderColor;
   background-color: $baseModBackground;
-  @include box-shadow(#{0 1px 3px rgba(0, 0, 0, 0.1)});
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   @include transition(#{border 0.3s ease, box-shadow 0.3s ease});
 }
 
 a.x-img-thumbnail:hover {
   border: 1px solid $accentColor;
-  @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -860,8 +860,8 @@ a.x-img-thumbnail:hover {
   line-height: 1.2;
   text-shadow: none;
   cursor: default;
-  @include opacity(0);
-  @include translate3d(0, 0, 0);
+  opacity: 0;
+  @include transform(#{translate3d(0, 0, 0)});
   @include transition(#{opacity 0.3s ease});
 
   &.top    { margin-top:  -0.273em; }
@@ -938,9 +938,9 @@ a.x-img-thumbnail:hover {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   cursor: default;
-  @include translate3d(0, 0, 0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  @include transform(#{translate3d(0, 0, 0)});
   @include background-clip(padding-box);
-  @include box-shadow(#{0 5px 10px rgba(0, 0, 0, 0.2)});
   @include transition(#{opacity 0.3s ease});
 
   &.top    { margin-top:  -0.825em; }
@@ -1145,7 +1145,7 @@ a.x-img-thumbnail:hover {
   margin: 0 0 10px;
   border: 1px solid $baseBorderColor;
   background-color: $baseModBackground;
-  @include box-shadow(#{$baseBoxShadow});
+  box-shadow: $baseBoxShadow;
 
   &:last-child {
     margin-bottom: 0;
@@ -1176,7 +1176,7 @@ a.x-img-thumbnail:hover {
       // background-color: rgba(0, 0, 0, 0.025);
 
       &:before {
-        @include rotate(0);
+        @include transform(#{rotate(0deg)});
       }
     }
 
@@ -1188,7 +1188,7 @@ a.x-img-thumbnail:hover {
       margin-right: 10px;
       font-size: 74%;
       color: rgba(0, 0, 0, 0.25);
-      @include rotate(45deg);
+      @include transform(#{rotate(45deg)});
       @include transition(#{all 0.3s ease});
       @include font-awesome();
     }
@@ -1225,8 +1225,8 @@ a.x-img-thumbnail:hover {
   padding: 0 !important;
   list-style: none;
   background-color: $baseModBackground;
-  @include box-shadow(#{$baseBoxShadow});
-  @include clearfix();
+  box-shadow: $baseBoxShadow;
+  @include cf();
 
   > li {
     float: left;
@@ -1347,11 +1347,11 @@ a.x-img-thumbnail:hover {
   border: 1px solid $baseBorderColor;
   border-top: 0;
   background-color: $baseModBackground;
-  @include box-shadow(#{$baseBoxShadow});
+  box-shadow: $baseBoxShadow;
 
   img,
   .x-btn {
-    @include translate3d(0, 0, 0);
+    @include transform(#{translate3d(0, 0, 0)});
   }
 
   .x-tab-pane {
@@ -1442,7 +1442,7 @@ a.x-img-thumbnail:hover {
 }
 
 .x-slides {
-  @include clearfix();
+  @include cf();
 }
 
 .x-slide {
@@ -1662,8 +1662,8 @@ a.x-img-thumbnail:hover {
     padding: 5px 5px 0;
     text-decoration: none;
     background-color: $baseModBackground;
-    @include box-shadow(#{$baseBoxShadow});
-    @include translate3d(0, 0, 0);
+    box-shadow: $baseBoxShadow;
+    @include transform(#{translate3d(0, 0, 0)});
 
     &:last-child {
       margin-right: 0;
@@ -1771,7 +1771,7 @@ a.x-img-thumbnail:hover {
       padding: 0;
       background-color: transparent;
       border-radius: 0;
-      @include box-shadow(#{none});
+      box-shadow: none;
     }
   }
 
@@ -1955,7 +1955,7 @@ a.x-img-thumbnail:hover {
   &.featured {
     position: relative;
     margin-top: -20px;
-    @include box-shadow(#{0 0 15px rgba(0, 0, 0, 0.1)});
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     @include break(middle-bear) {
       margin-top: 0;
     }
@@ -2038,7 +2038,7 @@ a.x-img-thumbnail:hover {
   padding: 2.35em;
   @include font-size(2.1);
   background-color: $baseModBackground;
-  @include box-shadow(#{$baseBoxShadow});
+  box-shadow: $baseBoxShadow;
   @include break(cubs) {
     @include font-size(1.8);
   }
@@ -2077,7 +2077,7 @@ a.x-img-thumbnail:hover {
   border: 1px solid $baseBorderColor;
   border-radius: 3px;
   background-color: $baseModBackground;
-  @include box-shadow(#{$baseBoxShadow});
+  box-shadow: $baseBoxShadow;
 
   .x-promo-image-wrap {
     img {
@@ -2168,7 +2168,7 @@ a.x-img-thumbnail:hover {
   padding: 1.75em;
   background-color: $baseModBackground;
   border-radius: 3px;
-  @include box-shadow(#{$baseBoxShadow});
+  box-shadow: $baseBoxShadow;
 
   &.message-left {
     .x-prompt-section.x-prompt-section-message {
@@ -2303,7 +2303,7 @@ a.x-img-thumbnail:hover {
   padding: 15px;
   @include font-size(1.1);
   background-color: $baseModBackground;
-  @include box-shadow(#{$baseBoxShadow});
+  box-shadow: $baseBoxShadow;
 
   &.left  { margin-right: 1.75em; }
   &.right { margin-left:  1.75em; }
@@ -2654,14 +2654,14 @@ a.x-img-thumbnail:hover {
     }
 
     &.flip-from-left .back,
-    &.flip-from-right .back                 { @include rotate-y(180deg);  }
-    &.flip-from-left.flipped .x-card-inner  { @include rotate-y(180deg);  }
-    &.flip-from-right.flipped .x-card-inner { @include rotate-y(-180deg); }
+    &.flip-from-right .back                 { @include transform(#{rotateY(180deg)});  }
+    &.flip-from-left.flipped .x-card-inner  { @include transform(#{rotateY(180deg)});  }
+    &.flip-from-right.flipped .x-card-inner { @include transform(#{rotateY(-180deg)}); }
 
     &.flip-from-top .back,
-    &.flip-from-bottom .back                 { @include rotate-x(180deg);  }
-    &.flip-from-top.flipped .x-card-inner    { @include rotate-x(-180deg); }
-    &.flip-from-bottom.flipped .x-card-inner { @include rotate-x(180deg);  }
+    &.flip-from-bottom .back                 { @include transform(#{rotateX(180deg)});  }
+    &.flip-from-top.flipped .x-card-inner    { @include transform(#{rotateX(-180deg)}); }
+    &.flip-from-bottom.flipped .x-card-inner { @include transform(#{rotateX(180deg)});  }
   }
 }
 
@@ -2709,10 +2709,10 @@ a.x-img-thumbnail:hover {
     > span.graphic { opacity: 1; }
   }
 
-  &.slide-top    { &:hover { > span.text { @include translate(0, -150%); } } }
-  &.slide-left   { &:hover { > span.text { @include translate(-80%, 0);  } } }
-  &.slide-right  { &:hover { > span.text { @include translate(80%, 0);   } } }
-  &.slide-bottom { &:hover { > span.text { @include translate(0, 150%);  } } }
+  &.slide-top    { &:hover { > span.text { @include transform(#{translate(0, -150%)}); } } }
+  &.slide-left   { &:hover { > span.text { @include transform(#{translate(-80%, 0)});  } } }
+  &.slide-right  { &:hover { > span.text { @include transform(#{translate(80%, 0)});   } } }
+  &.slide-bottom { &:hover { > span.text { @include transform(#{translate(0, 150%)});  } } }
 
   .image-overlay {
     display: none !important;
@@ -2831,11 +2831,11 @@ a.x-img-thumbnail:hover {
   }
 
   &:before {
-    @include rotate(30deg);
+    @include transform(#{rotate(30deg)});
   }
 
   &:after {
-    @include rotate(60deg);
+    @include transform(#{rotate(60deg)});
   }
 
   i {
@@ -2966,5 +2966,5 @@ a.x-img-thumbnail:hover {
   padding: 5px;
   background-color: $baseModBackground;
   border-radius: 3px;
-  @include box-shadow(#{$baseBoxShadow});
+  box-shadow: $baseBoxShadow;
 }

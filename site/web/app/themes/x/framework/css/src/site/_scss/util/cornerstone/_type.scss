@@ -40,6 +40,7 @@
 // Text Transform
 // =============================================================================
 
-.cs-tt-none  { text-transform: none !important;      }
-.cs-tt-upper { text-transform: uppercase !important; }
-.cs-tt-lower { text-transform: lowercase !important; }
+.cs-tt-none       { text-transform: none !important;       }
+.cs-tt-uppercase  { text-transform: uppercase !important;  }
+.cs-tt-lowercase  { text-transform: lowercase !important;  }
+.cs-tt-capitalize { text-transform: capitalize !important; }

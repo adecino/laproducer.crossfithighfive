@@ -22,6 +22,7 @@
 //   13. Shipping Method
 //   14. Product Name Variation
 //   15. Select2
+//   16. Product Images
 // =============================================================================
 
 // Columns
@@ -36,7 +37,7 @@
   &.columns-2,
   &.columns-3,
   &.columns-4 {
-    @include clearfix();
+    @include cf();
   }
 
   .cols-1, &.columns-1 { li.product { width: 100%;      } }
@@ -108,7 +109,7 @@
 
   .checkout_coupon {
     margin-bottom: 1.85em;
-    @include clearfix();
+    @include cf();
 
     .form-row-first,
     .form-row-last {
@@ -132,7 +133,7 @@
 
   form {
     margin-bottom: 0;
-    @include clearfix();
+    @include cf();
 
     h3 {
       margin-top: 60px;
@@ -190,12 +191,12 @@
 
     .woocommerce-billing-fields,
     .woocommerce-shipping-fields {
-      @include clearfix();
+      @include cf();
     }
 
     .form-row {
       margin-bottom: 0.65em;
-      @include clearfix();
+      @include cf();
 
       label[for="rememberme"] {
         margin: 5px 0 0;
@@ -886,7 +887,7 @@
     text-align: inherit;
     text-shadow: inherit;
     background-color: transparent;
-    @include box-shadow(#{none});
+    box-shadow: none;
 
     &:hover {
       margin: 0;
@@ -896,7 +897,7 @@
       text-decoration: underline;
       text-shadow: inherit;
       background-color: transparent;
-      @include box-shadow(#{none});
+      box-shadow: none;
     }
   }
 }
@@ -1012,8 +1013,8 @@
   li.product {
     .star-rating-container {
       position: absolute;
-      @include opacity(0);
-      @include translate3d(0, 0, 0);
+      opacity: 0;
+      @include transform(#{translate3d(0, 0, 0)});
       @include transition(#{opacity 0.3s ease});
 
       .star-rating {
@@ -1032,12 +1033,12 @@
 
   p.stars {
     float: left;
-    @include clearfix();
+    @include cf();
 
     span {
       display: block;
       position: relative;
-      @include clearfix();
+      @include cf();
 
       a {
         display: block;
@@ -1128,7 +1129,7 @@
   #shipping_method {
     margin-left: 0;
     list-style: none;
-    @include clearfix();
+    @include cf();
 
     li {
       float: left;
@@ -1185,5 +1186,46 @@
   .select2-container {
     display: block !important;
     margin: 0 0 $baseMargin;
+  }
+}
+
+
+
+// Product Images
+// =============================================================================
+
+.woocommerce {
+  div.product {
+    .images {
+      figure {
+        margin: 0;
+
+        [data-thumb] {
+          &:nth-child(n+2) {
+            display: block;
+            float: left;
+            width: 22%;
+            margin: 4% 4% 0 0;
+          }
+
+          &:nth-child(4n+1) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .thumbnails {
+        > a {
+          display: block;
+          float: left;
+          width: 22%;
+          margin: 4% 4% 0 0;
+
+          &:nth-child(4n+4) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
   }
 }

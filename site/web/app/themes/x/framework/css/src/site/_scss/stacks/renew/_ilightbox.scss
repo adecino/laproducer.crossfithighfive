@@ -169,7 +169,7 @@
   top: 45%;
   left: -192px;
   padding-left: 30px;
-  @include opacity(0.9);
+  opacity: 0.9;
   border-radius: 0 100px 100px 0;
   z-index: 100005;
 }
@@ -262,11 +262,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  @include opacity(0.7);
+  opacity: 0.7;
 }
 
 .ilightbox-thumbnails .ilightbox-thumbnails-grid .ilightbox-thumbnail .ilightbox-thumbnail-icon:hover {
-  @include opacity(1);
+  opacity: 1;
 }
 
 .ilightbox-holder {

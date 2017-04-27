@@ -29,7 +29,7 @@
 
 .x-main {
   position: relative;
-  @include clearfix();
+  @include cf();
 
   .widget {
     margin-top: 3em;
@@ -54,7 +54,7 @@
 }
 
 .entry-wrap {
-  @include clearfix();
+  @include cf();
 }
 
 .entry-title {
@@ -120,7 +120,7 @@
   display: block;
   position: relative;
   background-color: $linkColor;
-  @include translate3d(0, 0, 0);
+  @include transform(#{translate3d(0, 0, 0)});
 
   img {
     min-width: 100%;
@@ -148,18 +148,18 @@
     color: $white;
     background-color: rgba(0, 0, 0, 0.35);
     border-radius: 100em;
-    @include opacity(0);
+    opacity: 0;
     @include transition(#{opacity 0.75s ease});
   }
 }
 
 a.entry-thumb:hover {
   img {
-    @include opacity(0.15);
+    opacity: 0.15;
   }
 
   &:before {
-    @include opacity(1);
+    opacity: 1;
   }
 }
 
@@ -435,7 +435,7 @@ a.entry-thumb:hover {
     height: 100%;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.925);
-    @include translate(-100%, 0);
+    @include transform(#{translate(-100%, 0)});
     @include transition(#{all 0.75s ease});
 
     &:before {
@@ -462,7 +462,7 @@ a.entry-thumb:hover {
     overflow: hidden;
 
     &:hover .entry-cover {
-      @include translate(0, 0);
+      @include transform(#{translate(0, 0)});
     }
   }
 
@@ -525,11 +525,11 @@ a.entry-thumb:hover {
       cursor: default;
 
       img {
-        @include opacity(1);
+        opacity: 1;
       }
 
       &:before {
-        @include opacity(0);
+        opacity: 0;
       }
     }
   }

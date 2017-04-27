@@ -15,10 +15,11 @@
 // Site Wrap
 // =============================================================================
 
-.site {
+.site,
+.x-site {
   margin: 0 auto;
   background-color: $baseModBackground;
-  @include clearfix();
+  @include cf();
 }
 
 

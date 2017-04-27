@@ -48,7 +48,7 @@
   bottom: 5px;
   width: 10px;
   visibility: hidden\9;
-  @include opacity(0.01);
+  opacity: 0.01;
   background-color: $black;
   background-color: rgba(0, 0, 0, 0.075);
   border-radius: 5px;
@@ -72,5 +72,5 @@
 .pane.active,
 .pane.flashed {
   visibility: visible\9;
-  @include opacity(0.99);
+  opacity: 0.99;
 }

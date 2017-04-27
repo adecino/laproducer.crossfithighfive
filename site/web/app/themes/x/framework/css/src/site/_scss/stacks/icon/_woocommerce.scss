@@ -37,7 +37,7 @@
     clear: both;
     margin: 0 0 -55px;
     list-style: none;
-    @include clearfix();
+    @include cf();
   }
 
   li.product {
@@ -106,7 +106,7 @@
         padding: 0.45em 0.5em 0.575em;
         display: block;
         @include font-size(1.4);
-        @include opacity(0);
+        opacity: 0;
         @include text-overflow();
       }
     }
@@ -117,12 +117,12 @@
 
     &:hover {
       .star-rating-container {
-        @include opacity(1);
+        opacity: 1;
       }
 
       .entry-header {
         .button {
-          @include opacity(1);
+          opacity: 1;
         }
       }
     }
@@ -138,13 +138,13 @@
   .entry-content:first-child {
     margin: 0;
     padding: 0;
-    @include clearfix();
+    @include cf();
   }
 
   div.product {
     border: 0;
     padding: 0;
-    @include clearfix();
+    @include cf();
 
     .images {
       position: relative;
@@ -158,19 +158,6 @@
       .x-img-thumbnail:hover {
         border-color: $baseBorderSolid;
         border-color: $baseBorderRgba;
-      }
-
-      .thumbnails {
-        > a {
-          display: block;
-          float: left;
-          width: 22%;
-          margin: 4% 4% 0 0;
-
-          &:nth-child(4n+4) {
-            margin-right: 0;
-          }
-        }
       }
     }
 
@@ -311,7 +298,7 @@
 .widget_top_rated_products {
   ul {
     li {
-      @include clearfix();
+      @include cf();
       font-size: 78.5%;
 
       &:last-child {
@@ -404,7 +391,7 @@
     border: 1px solid $baseBorderSolid;
     border: 1px solid $baseBorderRgba;
     background-color: $baseModBackground;
-    @include clearfix();
+    @include cf();
 
     .button {
       float: left;
@@ -418,7 +405,7 @@
       text-shadow: none;
       color: $textColor;
       background-color: transparent;
-      @include box-shadow(#{none});
+      box-shadow: none;
       @include text-overflow();
 
       &:hover {
@@ -472,7 +459,7 @@
   }
 
   .price_slider_wrapper {
-    @include clearfix();
+    @include cf();
   }
 
   .ui-slider {
@@ -508,12 +495,12 @@
       background-color: $linkColor;
       border-radius: 1em;
       z-index: 1;
-      @include box-shadow(#{none});
+      box-shadow: none;
     }
   }
 
   .price_slider_amount {
-    @include clearfix();
+    @include cf();
 
     .button,
     .price_label {
@@ -527,7 +514,7 @@
       text-align: center;
       text-shadow: none;
       background-color: transparent;
-      @include box-shadow(#{none});
+      box-shadow: none;
       @include text-overflow();
     }
 
@@ -579,7 +566,7 @@
   .price {
     display: block;
     line-height: 1;
-    @include clearfix();
+    @include cf();
 
     > .from,
     > del {
@@ -618,7 +605,7 @@
     text-transform: uppercase;
     color: $linkColor;
     background-color: $baseModBackground;
-    @include rotate(-45deg);
+    @include transform(#{rotate(-45deg)});
     z-index: 1;
   }
 }
@@ -685,7 +672,7 @@
       margin-left: 90px;
       border: 0;
       padding: 0;
-      @include clearfix();
+      @include cf();
 
       @include break(middle-bear) {
         margin-left: 0;

@@ -15,4 +15,4 @@ wordpress_sites:
       provider: self-signed
     cache:
       enabled: false
-    #db_import: ../site/high_five_migration.sql
+    db_import: ../site/high_five_migration.sql

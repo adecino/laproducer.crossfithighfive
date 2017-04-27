@@ -26,9 +26,9 @@
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  @include translate3d(0, 0, 0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  @include transform(#{translate3d(0, 0, 0)});
   @include background-clip(padding-box);
-  @include box-shadow(#{0 5px 10px rgba(0, 0, 0, 0.2)});
   @include transition(#{opacity 0.3s ease});
 
 

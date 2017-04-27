@@ -29,10 +29,10 @@
 
   &.in {
     margin-bottom: 0;
-    @include opacity(0.375);
+    opacity: 0.375;
 
     &:hover {
-      @include opacity(0.825);
+      opacity: 0.825;
     }
   }
 

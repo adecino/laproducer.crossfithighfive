@@ -130,7 +130,7 @@
   left: 0;
   top: 0;
   display: block;
-  @include clearfix();
+  @include cf();
 }
 
 
@@ -160,7 +160,7 @@
     @include font-size(3.2);
     line-height: 1;
     color: $white;
-    @include opacity(0.5);
+    opacity: 0.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @include font-awesome();
@@ -169,7 +169,7 @@
 
   &:hover {
     &:before {
-      @include opacity(1);
+      opacity: 1;
     }
   }
 
@@ -180,7 +180,7 @@
 
 .slick-prev {
   left: 0;
-  // @include box-shadow(#{inset 35px 0 40px -35px rgba(0, 0, 0, 0.85)});
+  // box-shadow: inset 35px 0 40px -35px rgba(0, 0, 0, 0.85);
 
   &:before {
     content: "\f053";
@@ -190,7 +190,7 @@
 
 .slick-next {
   right: 0;
-  // @include box-shadow(#{inset -35px 0 40px -35px rgba(0, 0, 0, 0.85)});
+  // box-shadow: inset -35px 0 40px -35px rgba(0, 0, 0, 0.85);
 
   &:before {
     content: "\f054";
@@ -224,5 +224,5 @@
 .slick-track,
 .slick-slide,
 .slick-slide img {
-  @include translate3d(0, 0, 0);
+  @include transform(#{translate3d(0, 0, 0)});
 }

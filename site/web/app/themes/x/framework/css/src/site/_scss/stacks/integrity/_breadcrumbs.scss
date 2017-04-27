@@ -24,7 +24,7 @@
   text-shadow: $breadcrumbTextShadow;
   text-transform: uppercase;
   background-color: $breadcrumbBackground;
-  @include box-shadow(#{0 1px 0 0 $breadcrumbBoxShadow});
+  box-shadow: 0 1px 0 0 $breadcrumbBoxShadow;
 
   a {
     color: lighten($textColor, 25%);

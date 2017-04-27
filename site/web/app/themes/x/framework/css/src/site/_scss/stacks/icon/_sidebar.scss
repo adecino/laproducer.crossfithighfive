@@ -81,7 +81,7 @@
     margin: 0;
     border-top: 0;
     z-index: $zindexNavbar + 1;
-    @include translate3d(0, 0, 0);
+    @include transform(#{translate3d(0, 0, 0)});
   }
 
   .max.width {

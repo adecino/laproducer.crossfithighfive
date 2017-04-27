@@ -15,16 +15,11 @@
 // Addons Menu
 // =============================================================================
 
-@import url(//fonts.googleapis.com/css?family=Lato:400&text=X);
-
-#adminmenu li.menu-top.toplevel_page_x-addons-home > a .wp-menu-image:before {
-  content: "X";
-  padding-top: 6px;
-  font-family: Lato, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 400;
+#adminmenu li.menu-top.toplevel_page_x-addons-home > a .wp-menu-image {
+  background-size: 16px auto !important;
 }
 
-#adminmenu li.menu-top.toplevel_page_x-addons-home > .wp-submenu > li.wp-first-item:not(:last-child) {
+#adminmenu li.menu-top.toplevel_page_x-addons-home > .wp-submenu > li:nth-child(3):not(:last-child) {
   position: relative;
   margin-bottom: 9px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);

@@ -229,7 +229,7 @@ button.close {
   color: $warningText;
   background-color: $warningBackground;
   border-radius: $alertBorderRadius;
-  @include box-shadow($alertBoxShadow);
+  box-shadow: $alertBoxShadow;
 
   .h-alert {
     margin: $alertHeadingMargin;
@@ -339,7 +339,7 @@ button.close {
   height: 25px;
   margin-bottom: $baseMargin;
   background-color: $shortcodeSkillBarWrapBackground;
-  @include box-shadow(#{$shortcodeSkillbarBoxShadow});
+  box-shadow: $shortcodeSkillbarBoxShadow;
   border-radius: 4px;
 }
 
@@ -351,7 +351,7 @@ button.close {
   float: left;
   background-color: $accentColor;
   border-radius: 4px;
-  @include box-shadow(#{inset 0 1px 5px rgba(0, 0, 0, 0.45)});
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.45);
 }
 
 .x-skill-bar .bar .percent {
@@ -430,7 +430,7 @@ a.x-img {
 }
 
 a.x-img:not(.x-img-thumbnail) {
-  @include translate3d(0, 0, 0);
+  @include transform(#{translate3d(0, 0, 0)});
   @include transition(#{opacity 0.3s ease});
 
   &:hover {
@@ -473,7 +473,7 @@ a.x-img:not(.x-img-thumbnail) {
 
 a.x-img-thumbnail:hover {
   border-color: $accentColor;
-  @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -533,7 +533,7 @@ a.x-img-thumbnail:hover {
   margin: 0 0 8px;
   border: 1px solid $shortcodeBorderColor;
   border: 1px solid $shortcodeBorderColorRgba;
-  @include box-shadow(#{$shortcodeBoxShadowOuter});
+  box-shadow: $shortcodeBoxShadowOuter;
 
   &:last-child {
     margin-bottom: 0;
@@ -564,7 +564,7 @@ a.x-img-thumbnail:hover {
 
       &:before {
         color: $shortcodeAccordionBeforeColor;
-        @include rotate(0);
+        @include transform(#{rotate(0)});
       }
     }
 
@@ -584,7 +584,7 @@ a.x-img-thumbnail:hover {
       margin-right: 10px;
       font-size: 74%;
       color: $shortcodeAccordionBeforeColor;
-      @include rotate(45deg);
+      @include transform(#{rotate(45deg)});
       @include transition(#{all 0.3s ease});
       @include font-awesome();
     }
@@ -601,7 +601,7 @@ a.x-img-thumbnail:hover {
   border-top: 1px solid $shortcodeBorderColor;
   border-top: 1px solid $shortcodeBorderColorRgba;
   background-color: $shortcodeAccordionContentBackground;
-  @include box-shadow(#{$shortcodeBoxShadowInner});
+  box-shadow: $shortcodeBoxShadowInner;
 
   p:last-child,
   ul:last-child,
@@ -700,8 +700,8 @@ a.x-img-thumbnail:hover {
     padding: 5px 5px 0;
     background-color: $shortcodeRecentPostsBackground;
     border-radius: 3px;
-    @include box-shadow(#{$baseShortcodeBoxShadow});
-    @include translate3d(0, 0, 0);
+    box-shadow: $baseShortcodeBoxShadow;
+    @include transform(#{translate3d(0, 0, 0)});
 
     &:last-child {
       margin-right: 0;
@@ -801,7 +801,7 @@ a.x-img-thumbnail:hover {
     padding: 0;
     background-color: transparent;
     border-radius: 0;
-    @include box-shadow(#{none});
+    box-shadow: none;
   }
 
   .x-recent-posts-img {
@@ -986,7 +986,7 @@ a.x-img-thumbnail:hover {
   &.featured {
     position: relative;
     margin-top: -20px;
-    @include box-shadow(#{$shortcodePricingTableColumnBoxShadow});
+    box-shadow: $shortcodePricingTableColumnBoxShadow;
     @include break(middle-bear) {
       margin-top: 0;
     }
@@ -996,7 +996,7 @@ a.x-img-thumbnail:hover {
       padding-bottom: 28px;
       color: $white;
       background-color: $accentColor;
-      @include box-shadow(#{inset 0 0 0 5px rgba(0, 0, 0, 0.15)});
+      box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.15);
     }
 
     .x-pricing-column-info {
@@ -1073,7 +1073,7 @@ a.x-img-thumbnail:hover {
   @include font-size(2.1);
   background-color: darken($baseModBackground, 3%);
   border-radius: 0.5em;
-  @include box-shadow(#{$shortcodeCalloutBoxShadowOuter});
+  box-shadow: $shortcodeCalloutBoxShadowOuter;
   @include break(cubs) {
     @include font-size(1.8);
   }
@@ -1093,7 +1093,7 @@ a.x-img-thumbnail:hover {
     background-color: $baseModBackground;
     border-radius: 0.275em;
     z-index: 0;
-    @include box-shadow(#{$shortcodeCalloutBoxShadowInner});
+    box-shadow: $shortcodeCalloutBoxShadowInner;
   }
 
   .x-btn {
@@ -1125,7 +1125,7 @@ a.x-img-thumbnail:hover {
   border: 1px solid $shortcodeBorderColor;
   border: 1px solid $shortcodeBorderColorRgba;
   border-radius: 4px;
-  @include box-shadow(#{$shortcodeBoxShadowOuter});
+  box-shadow: $shortcodeBoxShadowOuter;
 }
 
 .x-promo-image-wrap {
@@ -1137,7 +1137,7 @@ a.x-img-thumbnail:hover {
 .x-promo-content {
   padding: 1.5em;
   background-color: $shortcodePromoBackground;
-  @include box-shadow(#{$shortcodeBoxShadowInner});
+  box-shadow: $shortcodeBoxShadowInner;
 }
 
 
@@ -1209,7 +1209,7 @@ a.x-img-thumbnail:hover {
   padding: 1.75em;
   background-color: $shortcodePromptBackground;
   border-radius: 4px;
-  @include box-shadow(#{$baseShortcodeBoxShadow});
+  box-shadow: $baseShortcodeBoxShadow;
 
   &.message-left {
     .x-prompt-section.x-prompt-section-message {
@@ -1342,7 +1342,7 @@ a.x-img-thumbnail:hover {
   @include font-size(1.1);
   background-color: $shortcodeTOCBackground;
   border-radius: 3px;
-  @include box-shadow(#{$baseShortcodeBoxShadow});
+  box-shadow: $baseShortcodeBoxShadow;
 
   &.left  { margin-right: 1.75em; }
   &.right { margin-left:  1.75em; }
@@ -1536,5 +1536,5 @@ a.x-img-thumbnail:hover {
   padding: 2.5%;
   background-color: $shortcodeMapBackground;
   border-radius: 2px;
-  @include box-shadow(#{$shortcodeMapBoxShadow});
+  box-shadow: $shortcodeMapBoxShadow;
 }

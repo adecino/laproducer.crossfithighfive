@@ -162,7 +162,7 @@
     border-color: $tagBorderColorActiveRgba;
     background-color: $tagBackgroundColorActive;
     background-color: $tagBackgroundColorActiveRgba;
-    @include box-shadow(#{$tagBoxShadowActive});
+    box-shadow: $tagBoxShadowActive;
   }
 }
 

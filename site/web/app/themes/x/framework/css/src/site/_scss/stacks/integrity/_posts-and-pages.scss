@@ -51,8 +51,8 @@
 
 .entry-featured {
   position: relative;
-  @include box-shadow(#{$entryFeaturedBoxShadow});
-  @include translate3d(0, 0, 0);
+  box-shadow: $entryFeaturedBoxShadow;
+  @include transform(#{translate3d(0, 0, 0)});
 }
 
 .has-post-thumbnail .entry-featured {
@@ -68,7 +68,7 @@
   padding: 60px;
   background-color: $baseModBackground;
   border-radius: 4px;
-  @include box-shadow(#{$baseBoxShadow});
+  box-shadow: $baseBoxShadow;
   @include break(middle-bear) {
     padding: 36px;
   }
@@ -116,7 +116,7 @@
     vertical-align: middle;
     color: $white;
     border-radius: 100em;
-    @include opacity(0);
+    opacity: 0;
     @include transition(#{opacity 0.75s ease});
     @include font-awesome();
   }
@@ -124,11 +124,11 @@
 
 a.entry-thumb:hover {
   img {
-    @include opacity(0.15);
+    opacity: 0.15;
   }
 
   &:before {
-    @include opacity(1);
+    opacity: 1;
   }
 }
 
@@ -175,7 +175,7 @@ a.entry-thumb:hover {
 
 .entry-content {
   margin-top: 1.25em;
-  @include clearfix();
+  @include cf();
 
   embed,
   iframe,
@@ -296,7 +296,7 @@ a.entry-thumb:hover {
   &.no-post-thumbnail {
     .entry-featured {
       margin-bottom: 1.5em;
-      @include box-shadow(#{none});
+      box-shadow: none;
     }
   }
 
@@ -328,7 +328,7 @@ a.entry-thumb:hover {
 .archive {
   .format-image {
     .entry-featured {
-      @include box-shadow(#{none});
+      box-shadow: none;
     }
   }
 
@@ -649,7 +649,7 @@ h2.entry-title.entry-title-portfolio {
       display: block;
       background-color: $headerLandmarkBackgroundColor;
       background-color: $headerLandmarkBackgroundColorRgba;
-      @include box-shadow(0 1px 0 0 $headerLandmarkBoxShadow);
+      box-shadow: 0 1px 0 0 $headerLandmarkBoxShadow;
     }
 
     &:before {

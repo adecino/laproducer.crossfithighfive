@@ -190,7 +190,7 @@
     color: $black;
     text-decoration: none;
     cursor: pointer;
-    @include opacity(0.25);
+    opacity: 0.25;
   }
 }
 
@@ -405,7 +405,7 @@ a.x-img {
 }
 
 a.x-img:not(.x-img-thumbnail) {
-  @include translate3d(0, 0, 0);
+  @include transform(#{translate3d(0, 0, 0)});
   @include transition(#{opacity 0.3s ease});
 
   &:hover {
@@ -506,7 +506,7 @@ a.x-img-thumbnail:hover {
 .x-accordion-group {
   margin: 0 0 8px;
   background-color: $baseModBackground;
-  // @include box-shadow(#{$shortcodeBoxShadow});
+  // box-shadow: $shortcodeBoxShadow;
 
   &:last-child {
     margin-bottom: 0;
@@ -538,7 +538,7 @@ a.x-img-thumbnail:hover {
 
       &:before {
         color: rgba(255, 255, 255, 0.25);
-        @include rotate(0);
+        @include transform(#{rotate(0deg)});
       }
     }
 
@@ -557,7 +557,7 @@ a.x-img-thumbnail:hover {
       bottom: 0.05em;
       margin-right: 10px;
       color: $baseModBackground;
-      @include rotate(-180deg);
+      @include transform(#{rotate(-180deg)});
       @include transition(#{all 0.3s ease});
       @include font-awesome();
     }
@@ -626,7 +626,7 @@ a.x-img-thumbnail:hover {
   padding: 7% 18%;
   text-align: center;
   background-color: $baseModBackground;
-  // @include box-shadow(#{$shortcodeBoxShadow});
+  // box-shadow: $shortcodeBoxShadow;
 
   label {
     margin: 0.75em 0 0;
@@ -673,7 +673,7 @@ a.x-img-thumbnail:hover {
     padding: 5px 5px 0;
     color: #999;
     background-color: $baseModBackground;
-    @include translate3d(0, 0, 0);
+    @include transform(#{translate3d(0, 0, 0)});
 
     &:last-child {
       margin-right: 0;
@@ -922,7 +922,7 @@ a.x-img-thumbnail:hover {
   margin: 0 0 -1px -1px;
   text-align: center;
   background-color: $baseModBackground;
-  // @include box-shadow(#{$shortcodeBoxShadow});
+  // box-shadow: $shortcodeBoxShadow;
   @include break(middle-bear) {
     float: none;
     margin-left: 0;
@@ -1034,7 +1034,7 @@ a.x-img-thumbnail:hover {
   padding: 1.5em 1.75em 1.75em;
   @include font-size(2.1);
   background-color: $baseModBackground;
-  // @include box-shadow(#{$shortcodeBoxShadow});
+  // box-shadow: $shortcodeBoxShadow;
   @include break(cubs) {
     @include font-size(1.8);
   }
@@ -1069,7 +1069,7 @@ a.x-img-thumbnail:hover {
   margin-bottom: $baseMargin;
   border: 1px solid $shortcodeBorderColor;
   background-color: $baseModBackground;
-  // @include box-shadow(#{$shortcodeBoxShadow});
+  // box-shadow: $shortcodeBoxShadow;
 }
 
 .x-promo-image-wrap {
@@ -1092,7 +1092,7 @@ a.x-img-thumbnail:hover {
   border: 1px solid $shortcodeBorderColor;
   padding: ($layoutSpacing - 5px) $layoutSpacing ($layoutSpacing - 3px);
   background-color: $baseModBackground;
-  // @include box-shadow(#{$shortcodeBoxShadow});
+  // box-shadow: $shortcodeBoxShadow;
 
   .h-about-the-author {
     margin: 0 0 ($layoutSpacing - 5px);
@@ -1152,7 +1152,7 @@ a.x-img-thumbnail:hover {
   border: 1px solid $shortcodeBorderColor;
   padding: 1.75em;
   background-color: $baseModBackground;
-  // @include box-shadow(#{$shortcodeBoxShadow});
+  // box-shadow: $shortcodeBoxShadow;
 
   &.message-left {
     .x-prompt-section.x-prompt-section-message {
@@ -1474,5 +1474,5 @@ a.x-img-thumbnail:hover {
   border: 1px solid $shortcodeBorderColor;
   padding: 2.5%;
   background-color: $baseModBackground;
-  // @include box-shadow(#{$shortcodeBoxShadow});
+  // box-shadow: $shortcodeBoxShadow;
 }

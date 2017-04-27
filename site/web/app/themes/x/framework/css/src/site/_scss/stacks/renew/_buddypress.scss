@@ -358,7 +358,7 @@
     text-shadow: none;
     color: $white;
     background-color: $accentColor;
-    @include box-shadow(#{none});
+    box-shadow: none;
 
     &:focus,
     &:active {
@@ -515,7 +515,7 @@
     text-shadow: none;
     color: $white;
     background-color: $accentColor;
-    @include box-shadow(#{none});
+    box-shadow: none;
 
     &:focus,
     &:active {
@@ -569,7 +569,7 @@
     border: $bpBorder;
     padding: $bpSpacingSm;
     background-color: $bpAccentColor;
-    @include clearfix();
+    @include cf();
 
     input[type="submit"] {
       display: none;
@@ -687,7 +687,7 @@
       clear: both;
       margin: 0;
       list-style: none;
-      @include clearfix();
+      @include cf();
 
       li {
         display: inline-block;
@@ -737,7 +737,7 @@
 
     > ul {
       margin: 0 (-$bpBorderWidth) (-$bpBorderWidth) 0;
-      @include clearfix();
+      @include cf();
 
       > li {
         width: 33.3333%;
@@ -846,7 +846,7 @@
     border: $bpBorder;
     padding: $bpSpacingSm;
     background-color: $baseModBackground;
-    @include clearfix();
+    @include cf();
 
     &:last-child {
       margin-bottom: 0;
@@ -933,7 +933,7 @@
         text-shadow: none;
         color: $textColor;
         background-color: transparent;
-        @include box-shadow(#{none});
+        box-shadow: none;
 
         &:focus,
         &:active {
@@ -1069,7 +1069,7 @@
 .buddypress .x-list-item-header {
   margin-bottom: $bpSpacingSm;
   @include font-size(1.2);
-  @include clearfix();
+  @include cf();
 
   .x-list-item-avatar-wrap {
     float: left;
@@ -1120,7 +1120,7 @@
 .buddypress .x-list-item-meta-inner {
   margin: 0 (-$bpSpacingSm);
   border-top: $bpBorder;
-  @include clearfix();
+  @include cf();
 
   > a,
   > .generic-button {
@@ -1219,7 +1219,7 @@
 
   .button-nav,
   #item-buttons {
-    @include clearfix();
+    @include cf();
 
     a {
       float: left;
@@ -1284,7 +1284,7 @@
 
   .pagination-links {
     display: inline-block;
-    @include clearfix();
+    @include cf();
   }
 }
 

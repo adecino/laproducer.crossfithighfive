@@ -15,13 +15,15 @@
 // Site Wrap
 // =============================================================================
 
-.site {
+.site,
+.x-site {
   margin: 0 auto;
   background-color: $white;
-  @include clearfix();
+  @include cf();
 }
 
-.x-boxed-layout-active .site {
+.x-boxed-layout-active .site,
+.x-boxed-layout-active .x-site {
   border: 1px solid $baseBorderSolid;
   border: 1px solid $baseBorderRgba;
   border-top: 0;

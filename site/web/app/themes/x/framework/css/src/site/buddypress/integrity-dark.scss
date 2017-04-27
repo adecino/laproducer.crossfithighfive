@@ -14,11 +14,9 @@
 // Functions, Variables, and Mixins
 // =============================================================================
 
-@import "../_scss/inc/functions";
-@import "../_scss/inc/variables";
-@import "../_scss/stacks/integrity/inc/variables-dark";
-@import "../_scss/inc/mixins";
-@import "../_scss/stacks/integrity/inc/mixins";
+@import "../../../../tco/css/lib/import";
+@import "../_scss/inc/import";
+@import "../_scss/stacks/integrity/inc/import-dark";
 
 
 

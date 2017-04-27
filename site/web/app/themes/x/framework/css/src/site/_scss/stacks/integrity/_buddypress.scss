@@ -179,7 +179,7 @@
     margin: 0 0 $bpSpacingSm;
     border: $bpBorder;
     padding: $bpSpacingSm;
-    @include box-shadow(#{$bpBoxShadowOuter});
+    box-shadow: $bpBoxShadowOuter;
   }
 
   .message-metadata {
@@ -226,7 +226,7 @@
     border: $bpBorder;
     padding: $bpSpacingSm;
     background-color: $bpAccentColor;
-    @include box-shadow(#{$bpBoxShadowOuter});
+    box-shadow: $bpBoxShadowOuter;
 
     select {
       margin: 0;
@@ -361,7 +361,7 @@
     text-shadow: none;
     color: $white;
     background-color: $accentColor;
-    @include box-shadow(#{none});
+    box-shadow: none;
     border-radius: $inputBorderRadius;
 
     &:focus,
@@ -476,7 +476,7 @@
   border: $bpBorder;
   padding: $bpSpacingSm;
   background-color: $bpAccentColor;
-  @include box-shadow(#{$bpBoxShadowOuter});
+  box-shadow: $bpBoxShadowOuter;
 
   .activity-greeting {
     margin-bottom: $bpSpacingSm;
@@ -520,7 +520,7 @@
     text-shadow: none;
     color: $white;
     background-color: $accentColor;
-    @include box-shadow(#{none});
+    box-shadow: none;
     border-radius: $inputBorderRadius;
 
     &:focus,
@@ -575,8 +575,8 @@
     border: $bpBorder;
     padding: $bpSpacingSm;
     background-color: $bpAccentColor;
-    @include box-shadow(#{$bpBoxShadowOuter});
-    @include clearfix();
+    box-shadow: $bpBoxShadowOuter;
+    @include cf();
 
     input[type="submit"] {
       display: none;
@@ -605,7 +605,7 @@
     border: $bpBorder;
     padding: $bpSpacingSm;
     background-color: $bpAccentColor;
-    @include box-shadow(#{$bpBoxShadowOuter});
+    box-shadow: $bpBoxShadowOuter;
 
     #message {
       float: left;
@@ -695,7 +695,7 @@
       clear: both;
       margin: 0;
       list-style: none;
-      @include clearfix();
+      @include cf();
 
       li {
         display: inline-block;
@@ -742,11 +742,11 @@
     margin: 0 0 $bpSpacingSm;
     border: $bpBorder;
     background-color: $bpAccentColor;
-    @include box-shadow(#{$bpBoxShadowOuter, $bpBoxShadowInner});
+    box-shadow: $bpBoxShadowOuter, $bpBoxShadowInner;
 
     > ul {
       margin: 0 (-$bpBorderWidth) (-$bpBorderWidth) 0;
-      @include clearfix();
+      @include cf();
 
       > li {
         width: 33.3333%;
@@ -769,7 +769,7 @@
           padding: 10px 11px;
           color: $bpNavSubnavColor;
           background-color: $bpAccentColor;
-          @include box-shadow(#{$bpBoxShadowInner});
+          box-shadow: $bpBoxShadowInner;
         }
 
         > a:hover,
@@ -856,8 +856,8 @@
     border: $bpBorder;
     padding: $bpSpacingSm;
     background-color: $baseModBackground;
-    @include box-shadow(#{$bpBoxShadowOuter});
-    @include clearfix();
+    box-shadow: $bpBoxShadowOuter;
+    @include cf();
 
     &:last-child {
       margin-bottom: 0;
@@ -945,7 +945,7 @@
         color: $textColor;
         background-color: transparent;
         border-radius: 3px;
-        @include box-shadow(#{none});
+        box-shadow: none;
 
         &:focus,
         &:active {
@@ -1081,7 +1081,7 @@
 .buddypress .x-list-item-header {
   margin-bottom: $bpSpacingSm;
   @include font-size(1.2);
-  @include clearfix();
+  @include cf();
 
   .x-list-item-avatar-wrap {
     float: left;
@@ -1132,7 +1132,7 @@
 .buddypress .x-list-item-meta-inner {
   margin: 0 (-$bpSpacingSm);
   border-top: $bpBorder;
-  @include clearfix();
+  @include cf();
 
   > a,
   > .generic-button {
@@ -1231,7 +1231,7 @@
 
   .button-nav,
   #item-buttons {
-    @include clearfix();
+    @include cf();
 
     a {
       float: left;
@@ -1298,7 +1298,7 @@
 
   .pagination-links {
     display: inline-block;
-    @include clearfix();
+    @include cf();
   }
 }
 
@@ -1311,7 +1311,7 @@
   table {
     border: $bpBorder;
     background-color: $baseModBackground;
-    @include box-shadow(#{$bpBoxShadowOuter});
+    box-shadow: $bpBoxShadowOuter;
 
     th,
     td {

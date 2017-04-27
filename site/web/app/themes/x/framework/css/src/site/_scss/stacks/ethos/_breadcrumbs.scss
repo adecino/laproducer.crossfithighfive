@@ -61,12 +61,12 @@
 
     // &:before {
     //   top: -11px;
-    //   @include rotate(65deg);
+    //   @include transform(#{rotate(65deg)});
     // }
 
     // &:after {
     //   bottom: -12px;
-    //   @include rotate(-65deg);
+    //   @include transform(#{rotate(-65deg)});
     // }
   }
 

@@ -15,27 +15,33 @@
 
 jQuery(document).ready(function($) {
 
-  //
-  // scrollBottom function.
-  //
+  // Setup Globals
+  // -------------
+
+  window.xGlobal = {
+    classActive  : 'x-active',
+    classFocused : 'x-focused',
+  }
+
+
+  // Add scrollBottom() Function
+  // ---------------------------
 
   $.fn.scrollBottom = function() {
     return $(document).height() - this.scrollTop() - this.height();
   };
 
 
-  //
-  // Prevent default behavior on various toggles.
-  //
+  // Prevent Default Behavior on Various Toggles
+  // -------------------------------------------
 
   $('.x-btn-navbar, .x-btn-navbar-search, .x-btn-widgetbar').click(function(e) {
     e.preventDefault();
   });
 
 
-  //
-  // YouTube z-index fix.
-  //
+  // YouTube z-index Fix
+  // -------------------
 
   $('iframe[src*="youtube.com"]').each(function() {
     var url = $(this).attr('src');
@@ -53,10 +59,10 @@ jQuery(document).ready(function($) {
   });
 
 
-  //
-  // Resize isotope container if gallery navigation is clicked or if an arrow
-  // key is pressed to ensure that elements are spaced out properly.
-  //
+  // Isotope
+  // -------
+  // Resize container if gallery navigation is clicked or if an arrow key is
+  // pressed to ensure that elements are spaced out properly.
 
   $('body').on('click', '.x-iso-container .flex-direction-nav a', function() {
     setTimeout(function() { $window.smartresize(); }, 750);

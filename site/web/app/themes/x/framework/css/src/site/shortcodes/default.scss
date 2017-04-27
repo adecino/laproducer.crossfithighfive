@@ -17,10 +17,9 @@
 // Functions, Variables, and Mixins
 // =============================================================================
 
-@import "../_scss/inc/functions";
-@import "../_scss/inc/variables";
-@import "../_scss/shortcodes_default/inc/variables";
-@import "../_scss/inc/mixins";
+@import "../../../../tco/css/lib/import";
+@import "../_scss/inc/import";
+@import "../_scss/shortcodes_default/inc/import";
 
 
 

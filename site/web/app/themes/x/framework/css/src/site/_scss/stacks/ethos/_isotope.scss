@@ -137,7 +137,7 @@
 .option-set {
   margin: 0 0 $layoutSpacing;
   list-style: none;
-  @include clearfix();
+  @include cf();
 
   .x-index-filter-label,
   .x-portfolio-filter-label {

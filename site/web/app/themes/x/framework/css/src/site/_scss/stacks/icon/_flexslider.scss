@@ -60,7 +60,7 @@
 //
 
 .x-slides {
-  @include clearfix();
+  @include cf();
 }
 
 
@@ -114,7 +114,7 @@
   text-align: center;
   color: $white !important;
   background-color: $accentColor;
-  @include opacity(0.5);
+  opacity: 0.5;
   @include transition(#{opacity 0.3s ease});
   z-index: 10;
 
@@ -125,7 +125,7 @@
   &:hover {
     text-decoration: none;
     color: $white !important;
-    @include opacity(1);
+    opacity: 1;
   }
 
   &.flex-prev {

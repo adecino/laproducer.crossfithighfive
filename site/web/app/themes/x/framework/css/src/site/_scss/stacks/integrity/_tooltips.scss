@@ -24,8 +24,8 @@
   font-weight: normal;
   line-height: 1.2;
   text-shadow: none;
-  @include opacity(0);
-  @include translate3d(0, 0, 0);
+  opacity: 0;
+  @include transform(#{translate3d(0, 0, 0)});
   @include transition(#{opacity 0.3s ease});
 
   &.top    { margin-top:  -0.273em; }

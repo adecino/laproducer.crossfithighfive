@@ -90,7 +90,6 @@ html {
 a {
   text-decoration: none;
   background-color: transparent;
-  @include transition($linkTransitions);
 
   &:focus {
     @include tab-focus();

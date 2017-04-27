@@ -186,14 +186,14 @@
   font-weight: bold;
   line-height: $baseLineHeight;
   color: $black;
-  @include opacity(0.4);
+  opacity: 0.4;
   @include transition(#{opacity 0.3s ease});
   
   &:hover {
     color: $black;
     text-decoration: none;
     cursor: pointer;
-    @include opacity(0.6);
+    opacity: 0.6;
   }
 }
 
@@ -415,7 +415,7 @@ a.x-img {
 }
 
 a.x-img:not(.x-img-thumbnail) {
-  @include translate3d(0, 0, 0);
+  @include transform(#{translate3d(0, 0, 0)});
   @include transition(#{opacity 0.3s ease});
 
   &:hover {
@@ -544,7 +544,7 @@ a.x-img-thumbnail:hover {
 
       &:before {
         color: darken($shortcodeBorderColor, 7%);
-        @include rotate(0);
+        @include transform(#{rotate(0)});
       }
     }
 
@@ -564,7 +564,7 @@ a.x-img-thumbnail:hover {
       margin-right: 10px;
       font-size: 74%;
       -webkit-font-smoothing: antialiased;
-      @include rotate(45deg);
+      @include transform(#{rotate(45deg)});
       @include transition(#{all 0.3s ease});
       @include font-awesome();
     }
@@ -675,7 +675,7 @@ a.x-img-thumbnail:hover {
     padding: 5px 5px 0;
     color: #999;
     background-color: $baseModBackground;
-    @include translate3d(0, 0, 0);
+    @include transform(#{translate3d(0, 0, 0)});
 
     &:last-child {
       margin-right: 0;
@@ -942,7 +942,7 @@ a.x-img-thumbnail:hover {
       letter-spacing: 2px;
       text-transform: uppercase;
       color: $black;
-      @include opacity(0.5);
+      opacity: 0.5;
     }
   }
 

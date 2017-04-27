@@ -74,7 +74,7 @@
 .gallery {
   clear: both;
   margin: -4% 0 $baseMargin;
-  @include clearfix();
+  @include cf();
 
   .gallery-item {
     float: left;

@@ -263,11 +263,11 @@ body .x-sidebar .h-widget {
 
     a {
       color: $white;
-      @include opacity(0.15);
+      opacity: 0.15;
       @include transition(#{opacity 0.3s ease});
 
       &:hover {
-        @include opacity(1);
+        opacity: 1;
       }
     }
   }
@@ -483,7 +483,7 @@ body .x-sidebar .h-widget {
     font-size: 85%;
     margin-top: 0.5em;
     text-transform: uppercase;
-    @include opacity(0.575);
+    opacity: 0.575;
   }
 }
 
@@ -541,7 +541,7 @@ body .x-sidebar .h-widget {
   display: block;
   font-size: 85%;
   text-transform: uppercase;
-  @include opacity(0.575);
+  opacity: 0.575;
 }
 
 .widget_rss .rssSummary {
@@ -552,7 +552,7 @@ body .x-sidebar .h-widget {
   display: block;
   font-size: 85%;
   text-transform: uppercase;
-  @include opacity(0.575);
+  opacity: 0.575;
 
   &:before {
     content: "By: "
@@ -592,7 +592,7 @@ body .x-sidebar .h-widget {
 
 .widget_tag_cloud .tagcloud,
 .widget_product_tag_cloud .tagcloud {
-  @include clearfix();
+  @include cf();
 }
 
 .widget_tag_cloud .tagcloud a,

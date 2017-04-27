@@ -43,14 +43,14 @@
 
   .h-widget:before,
   .h-widget:after {
-    @include opacity(0.35);
+    opacity: 0.35;
   }
 
   a:before,
   a:after {
     line-height: 1;
     text-decoration: inherit;
-    @include opacity(0.35);
+    opacity: 0.35;
     @include font-awesome();
   }
 
@@ -71,14 +71,14 @@
     list-style: none;
     border-radius: 6px;
     background-color: $widgetUlBackground;
-    @include box-shadow(#{$widgetUlBoxShadow});
+    box-shadow: $widgetUlBoxShadow;
 
     li {
       border-bottom: 1px solid $widgetBorderColor;
       border-bottom: 1px solid $widgetBorderColorRgba;
       padding: 0.65em 0.85em;
       line-height: 1.5;
-      @include box-shadow(#{$widgetLiBoxShadow});
+      box-shadow: $widgetLiBoxShadow;
       @include transition(#{background-color 0.3s ease});
 
       &:hover {
@@ -197,11 +197,11 @@
   tbody td {
     border: 1px solid darken($baseModBackground, 10%);
     background-color: $baseModBackground;
-    @include box-shadow(#{inset 0 1px 2px rgba(0, 0, 0, 0.045)});
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.045);
 
     &.pad {
       background-color: transparent;
-      @include box-shadow(#{none});
+      box-shadow: none;
 
       &:first-child {
         border-left: 0;
@@ -268,12 +268,12 @@
   border-bottom: 0;
   border-radius: 0;
   background-color: transparent;
-  @include box-shadow(#{$widgetUlChildrenBoxShadow});
+  box-shadow: $widgetUlChildrenBoxShadow;
 }
 
 .widget.widget_categories li ul li,
 .widget.widget_product_categories li ul li {
-  @include box-shadow(#{$widgetLiBoxShadow});
+  box-shadow: $widgetLiBoxShadow;
 }
 
 .widget.widget_categories li li a,
@@ -457,7 +457,7 @@
     display: block;
     margin-top: 0.5em;
     text-transform: uppercase;
-    @include opacity(0.575);
+    opacity: 0.575;
   }
 }
 
@@ -508,7 +508,7 @@
   display: block;
   margin-top: 0.5em;
   text-transform: uppercase;
-  @include opacity(0.575);
+  opacity: 0.575;
 }
 
 .widget_rss .rssSummary {
@@ -519,7 +519,7 @@
 .widget_rss cite {
   display: block;
   text-transform: uppercase;
-  @include opacity(0.575);
+  opacity: 0.575;
 
   &:before {
     content: "By: "
@@ -553,7 +553,7 @@
 .widget_tag_cloud .tagcloud,
 .widget_product_tag_cloud .tagcloud {
   margin-bottom: -0.615em;
-  @include clearfix();
+  @include cf();
 }
 
 .widget_tag_cloud .tagcloud a,
@@ -581,13 +581,13 @@
     list-style: disc;
     background-color: transparent;
     border-radius: 0;
-    @include box-shadow(#{none});
+    box-shadow: none;
 
     li {
       border: 0;
       padding: 0;
       background-color: transparent;
-      @include box-shadow(#{none});
+      box-shadow: none;
 
       &:hover {
         background-color: transparent;
@@ -619,7 +619,7 @@
   li {
     border: 0;
     padding: 0;
-    @include box-shadow(#{none});
+    box-shadow: none;
 
     &:hover {
       background-color: transparent;
@@ -632,7 +632,7 @@
       border-bottom: 1px solid $widgetBorderColorRgba;
       // border-bottom: 0;
       padding: 0.65em 0.85em;
-      @include box-shadow(#{$widgetLiABlockBoxShadow});
+      box-shadow: $widgetLiABlockBoxShadow;
 
       &:before {
         content: "\f0da";
@@ -649,7 +649,7 @@
       border: 0;
       background-color: transparent;
       border-radius: 0;
-      @include box-shadow(#{$widgetLiABlockBoxShadow});
+      box-shadow: $widgetLiABlockBoxShadow;
 
       li {
         a {

@@ -41,7 +41,7 @@
 
 .bbp-forums,
 .bbp-topics {
-  @include box-shadow(#{none});
+  box-shadow: none;
 }
 
 .bbp-forums {
@@ -71,7 +71,7 @@
 .bbp-body > .hentry,
 .bbp-footer,
 .bbp-footer > ul {
-  @include clearfix();
+  @include cf();
 }
 
 .bbp-header > ul > li,
@@ -124,7 +124,7 @@
 
 .x-bbp-header {
   margin: 0 0 $bpSpacingSm;
-  @include clearfix();
+  @include cf();
 
   .actions {
     line-height: 1;
@@ -198,7 +198,7 @@
   line-height: 1;
   text-transform: uppercase;
   background-color: $bpAccentColor;
-  @include clearfix();
+  @include cf();
 
   .x-item-info-date {
     float: left;
@@ -227,7 +227,7 @@
     .x-bbp-admin-links-inner {
       margin: 0 (-$bpSpacingSm - $bpBorderWidth) (-$bpSpacingSm - $bpBorderWidth) (-$bpSpacingSm);
       border-top: $bpBorder;
-      @include clearfix();
+      @include cf();
     }
 
     a {
@@ -259,7 +259,7 @@
 }
 
 .x-bbp-item-info-content {
-  @include clearfix();
+  @include cf();
 
   .x-bbp-item-info-author {
     width: 80px;
@@ -320,7 +320,7 @@
   border: $bpBorder;
   padding: $bpSpacingSm;
   background-color: $bpAccentColor;
-  @include clearfix();
+  @include cf();
 
   label {
     margin: 0;
@@ -402,7 +402,7 @@
 }
 
 .bbp-submit-wrapper {
-  @include clearfix();
+  @include cf();
 
   button[type="submit"] {
     float: left;
@@ -417,7 +417,7 @@
     text-shadow: none;
     color: $white;
     background-color: $accentColor;
-    @include box-shadow(#{none});
+    box-shadow: none;
 
     &:focus,
     &:active {
@@ -483,7 +483,7 @@
   > ul {
     margin: 0 (-$bpBorderWidth) (-$bpBorderWidth) 0;
     list-style: none;
-    @include clearfix();
+    @include cf();
 
     > li {
       display: inline-block;
@@ -631,7 +631,7 @@
 
 .bbp-pagination-links {
   display: inline-block;
-  @include clearfix();
+  @include cf();
 }
 
 
@@ -684,7 +684,7 @@
   text-transform: none;
   color: $white;
   background-color: $accentColor;
-  @include box-shadow(#{none});
+  box-shadow: none;
 
   &:hover {
     color: $white;

@@ -57,7 +57,7 @@
   margin-bottom: 0;
   border: 2px solid $shortcodeBorderColor;
   border-bottom: 0;
-  @include clearfix();
+  @include cf();
 
   > li {
     float: left;
@@ -260,7 +260,7 @@
 //
 
 .tabbable {
-  @include clearfix();
+  @include cf();
 }
 
 .x-tab-content {
@@ -271,7 +271,7 @@
 
   img,
   .x-btn {
-    @include translate3d(0, 0, 0);
+    @include transform(#{translate3d(0, 0, 0)});
   }
 
   .x-tab-pane {
